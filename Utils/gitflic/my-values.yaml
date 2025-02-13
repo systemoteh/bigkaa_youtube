@@ -12,7 +12,7 @@ ingress:
   enabled: true
   className: "system-ingress"
   hosts:
-    - host: gitflic.kryukov.local
+    - host: gitflic.systemoteh.ru
       paths:
         - path: /
           pathType: ImplementationSpecific
@@ -61,8 +61,8 @@ volumes:
 
 config:
   url:
-    base: "http://gitflic.kryukov.local"
-    transport: "gitflic.kryukov.local"
+    base: "http://gitflic.systemoteh.ru"
+    transport: "gitflic.systemoteh.ru"
 
 mailRelay:
   builtin: true

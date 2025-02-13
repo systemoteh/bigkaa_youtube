@@ -8,13 +8,13 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'registry.kryukov.local/charts'
+    repoURL: 'registry.systemoteh.ru/charts'
     chart: devcontainer
     targetRevision: 0.1.0
     helm:
       values: |
         image:
-          repository: registry.kryukov.local/library/ubuntu_ssh
+          repository: registry.systemoteh.ru/library/ubuntu_ssh
           pullPolicy: Always
           tag: "24.04"
         user:

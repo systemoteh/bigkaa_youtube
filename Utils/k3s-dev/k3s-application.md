@@ -74,7 +74,7 @@ kubectl apply -f 01-ingress-controller.yaml
 
 ```shell
 kubectl -n ingress-nginx get all
-curl http://192.168.218.189
+curl http://192.168.1.30
 ```
 
 ## ArgoCD

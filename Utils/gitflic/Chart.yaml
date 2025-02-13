@@ -5,9 +5,9 @@ type: application
 version: 0.1.0
 appVersion: "2.16.1"
 maintainers:
-  - name: Artur Kryukov
-    email: artur@kryukov.moscow
-    url: https://www.kryukov.biz
+  - name: systemoteh
+    email: mail@systemoteh.ru
+    url: https://www.systemoteh.ru
 dependencies:
   - name: redis
     version: 18.5.0

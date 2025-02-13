@@ -8,7 +8,7 @@ RUN apk add --no-cache git && \
 
 # Final stage
 FROM alpine:3.18
-LABEL Author="Artur Kryukov <artur@kryukov.biz>"
+LABEL Author="systemoteh <mail@systemoteh.ru>"
 EXPOSE 8080
 WORKDIR /uniproxy
 

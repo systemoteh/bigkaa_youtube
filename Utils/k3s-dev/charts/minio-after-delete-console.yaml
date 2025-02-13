@@ -33,13 +33,13 @@ spec:
     ingress:
       enabled: true
       ingressClassName: "system-ingress"
-      hostname: minio.kryukov.local
+      hostname: minio.systemoteh.ru
       path: /
       pathType: Prefix
       servicePort: minio-console
       annotations:
         cert-manager.io/cluster-issuer: dev-ca-issuer
-        cert-manager.io/common-name: minio.kryukov.local
+        cert-manager.io/common-name: minio.systemoteh.ru
         cert-manager.io/subject-organizations: "home dev lab"
         cert-manager.io/subject-countries: "RU"
         cert-manager.io/subject-localities: "Moscow"

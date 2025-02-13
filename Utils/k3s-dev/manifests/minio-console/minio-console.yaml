@@ -55,7 +55,7 @@ metadata:
   name: minio-console
   annotations:
     cert-manager.io/cluster-issuer: dev-ca-issuer
-    cert-manager.io/common-name: minio.kryukov.local
+    cert-manager.io/common-name: minio.systemoteh.ru
     cert-manager.io/subject-organizations: "home dev lab"
     cert-manager.io/subject-countries: "RU"
     cert-manager.io/subject-localities: "Moscow"
@@ -69,7 +69,7 @@ metadata:
 spec:
   ingressClassName: "system-ingress"
   rules:
-    - host: "minio.kryukov.local"
+    - host: "minio.systemoteh.ru"
       http:
         paths:
           - path: /
@@ -81,5 +81,5 @@ spec:
                   name: http
   tls:
     - hosts:
-      - minio.kryukov.local
+      - minio.systemoteh.ru
       secretName: minio-console-tls

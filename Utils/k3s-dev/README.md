@@ -32,6 +32,8 @@
 ### DNS сервер
 
 ```shell
+sudo su
+
 dnf install bind bind-utils -y
 ```
 
@@ -43,24 +45,24 @@ options {
         recursion yes;
         dnssec-validation no;
 };        
-zone "kryukov.local" IN {
+zone "systemoteh.ru" IN {
         type master;
-        file "kryukov.local";
+        file "systemoteh.ru";
 };        
 ```
 
-Файл `/var/named/kryukov.local`:
+Файл `/var/named/systemoteh.ru`:
 
 ```zone
 $TTL 1D
-@       IN SOA  @ artur.kryukov.biz. (
-                2024021200      ; serial
+@       IN SOA  @ k3s.systemoteh.ru. (
+                2025021200      ; serial
                 1D      ; refresh
                 1H      ; retry
                 1W      ; expire
                 3H )    ; minimum
         NS      dev
-dev     A       192.168.218.189 ; это ip виртуальной машины с kubernetes
+dev     A       192.168.1.30 ; это ip виртуальной машины с kubernetes
 gitlab      IN CNAME dev
 registry    IN CNAME dev
 pg          IN CNAME dev
@@ -73,7 +75,7 @@ postgre     IN CNAME dev
 
 ```shell
 named-checkconf
-named-checkzone kryukov.local /var/named/kryukov.local
+named-checkzone systemoteh.ru /var/named/systemoteh.ru
 systemctl start named
 systemctl enable named
 ```
@@ -81,7 +83,7 @@ systemctl enable named
 Заменяем IP адрес DNS в клиенте.
 
 ```shell
-sed -i -e 's/^dns=.*/dns=192.168.218.189\;/' /etc/NetworkManager/system-connections/ens33.nmconnection
+sed -i -e 's/^dns=.*/dns=192.168.1.30\;/' /etc/NetworkManager/system-connections/enp0s3.nmconnection
 systemctl restart NetworkManager
 ```
 
@@ -90,7 +92,7 @@ systemctl restart NetworkManager
 ```shell
 cat /etc/resolv.conf
 dig mail.ru
-dig dev.kryukov.local
+dig dev.systemoteh.ru
 ```
 
 ## k3s
@@ -105,7 +107,9 @@ curl -sfL https://get.k3s.io | sh -s - server --default-local-storage-path "/var
 ```
 
 ```shell
-watch kubectl get pods -A
+service k3s status
+/usr/local/bin/kubectl version
+/usr/local/bin/kubectl get pods -A
 ```
 
 Не забудьте скопировать файл `/etc/rancher/k3s/k3s.yaml` на машины, где вы планируете

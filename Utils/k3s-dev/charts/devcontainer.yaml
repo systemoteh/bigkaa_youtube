@@ -5,13 +5,13 @@ metadata:
   name: artur_dev
   namespace: default
 spec:
-  repo: 'oci://registry.kryukov.local/charts'
+  repo: 'oci://registry.systemoteh.ru/charts'
   chart: devcontainer
   version: 0.1.0
   targetNamespace: default
   valuesContent: |-
     image:
-      repository: registry.kryukov.local/library/ubuntu_ssh
+      repository: registry.systemoteh.ru/library/ubuntu_ssh
       pullPolicy: Always
       tag: "24.04"
 

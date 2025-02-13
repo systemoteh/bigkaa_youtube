@@ -2,7 +2,7 @@ ingress:
   enabled: true
   className: "system-ingress"
   hosts:
-    - host: www.kryukov.local
+    - host: www.systemoteh.ru
       paths:
         - path: /
           pathType: Prefix

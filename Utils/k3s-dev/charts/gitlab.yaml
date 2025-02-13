@@ -71,9 +71,9 @@ spec:
           enabled: true
 
       hosts:
-        domain: kryukov.local
+        domain: systemoteh.ru
         https: true
-        externalIP: 192.168.218.189
+        externalIP: 192.168.1.30
 
       appConfig:
         # https://docs.gitlab.com/charts/advanced/external-object-storage/#lfs-artifacts-uploads-packages-external-diffs-terraform-state-dependency-proxy
@@ -118,7 +118,7 @@ spec:
         tls: false
         starttls_auto: false
         openssl_verify_mode: 'none'
-        domain: "git.kryukov.local"
+        domain: "git.systemoteh.ru"
         address: mail-relay.mail-relay.svc
         port: 25
         authentication: "none"
@@ -126,8 +126,8 @@ spec:
           secret: 'fake-mail-password'
           key: 'password'
       email:
-        from: "noreply@gitlab.kryukov.local"
-        display_name: "GitLab kryukov.local"
+        from: "noreply@gitlab.systemoteh.ru"
+        display_name: "GitLab systemoteh.ru"
 
     # https://docs.gitlab.com/charts/advanced/external-object-storage/#backups
     gitlab:
@@ -143,13 +143,13 @@ spec:
       webservice:
         ingress:
           annotations:
-            cert-manager.io/common-name: gitlab.kryukov.local
+            cert-manager.io/common-name: gitlab.systemoteh.ru
           tls:
             secretName: gitlab-tls
       kas:
         ingress:
           annotations:
-            cert-manager.io/common-name: kas.kryukov.local
+            cert-manager.io/common-name: kas.systemoteh.ru
           tls:
             secretName: kas-tls
     

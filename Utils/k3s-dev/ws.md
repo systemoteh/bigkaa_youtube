@@ -6,7 +6,7 @@
 
 В группе `dev` добавляем переменные:
 
-- DEV_REGISTRY - `registry.kryukov.local`
+- DEV_REGISTRY - `registry.systemoteh.ru`
 - DEV_REGISTRY_USER - `admin`
 - DEV_REGISTRY_PASSWORD - `password`
 - DEV_CA - добавляем (как файл) сертификат нашего кастомного CA. *ca.crt находится в namespace `cert-manager`, secret `dev-ca`.*
@@ -34,15 +34,15 @@
 ### Docker
 
 ```shell
-docker login registry.kryukov.local
+docker login registry.systemoteh.ru
 ```
 
 ```shell
-docker build -t registry.kryukov.local/library/ubuntu_ssh:24.04 .
+docker build -t registry.systemoteh.ru/library/ubuntu_ssh:24.04 .
 ```
 
 ```shell
-docker push registry.kryukov.local/library/ubuntu_ssh:24.04
+docker push registry.systemoteh.ru/library/ubuntu_ssh:24.04
 ```
 
 ### Сборка контейнера в Gitlab
@@ -80,7 +80,7 @@ ssh-keygen -t ed25519
 В Harbor создаём публичный проект `charts`.
 
 ```shell
-git clone https://gitlab.kryukov.local/dev/charts/devcontainer.git
+git clone https://gitlab.systemoteh.ru/dev/charts/devcontainer.git
 ```
 
 Копируем в проект директорию [devcontainer](charts/devcontainer) со всем содержимым.
@@ -106,7 +106,7 @@ helm install artur charts/devcontainer
 В ручную, из репозитория:
 
 ```shell
-helm install artur oci://registry.kryukov.local/charts/devcontainer --version 0.1.0
+helm install artur oci://registry.systemoteh.ru/charts/devcontainer --version 0.1.0
 ```
 
 Или чарт k3s:
@@ -124,5 +124,5 @@ kubectl apply -f argocd-apps/devcontainer.yaml
 ## Подключение к контейнеру
 
 ```shell
-ssh artur@192.168.218.189 -p 31022
+ssh artur@192.168.1.30 -p 31022
 ```
