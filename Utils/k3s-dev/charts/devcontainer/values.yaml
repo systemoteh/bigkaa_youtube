@@ -10,11 +10,11 @@ image:
 
 # Параметры пользователя
 user:
-  name: artur
+  name: systemoteh
   id: "1001"
   baseHomeDirHostPath: /home
   pubKey:
-  - "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOOdZ/awApeoYqqs54lPF1Hxdc9oT0cyjQzM2CxZ2cEQ artur@ART-RYZEN9"
+  - "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOOdZ/awApeoYqqs54lPF1Hxdc9oT0cyjQzM2CxZ2cEQ systemoteh@ART-RYZEN9"
 
 cacrt: |
   -----BEGIN CERTIFICATE-----

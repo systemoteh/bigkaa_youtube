@@ -86,7 +86,7 @@ spec:
         externalDatabase:
           host: postgres-np.psql.svc
           port: 5432
-          user: artur
+          user: systemoteh
           password: "password"
           sslmode: disable
           coreDatabase: "harbor"

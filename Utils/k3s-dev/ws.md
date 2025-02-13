@@ -62,9 +62,9 @@ docker push registry.systemoteh.ru/library/ubuntu_ssh:24.04
 На машине, где работает k3s:
 
 ```shell
-groupadd -g 1001 artur
-useradd -u 1001 -g 1001 artur
-passwd artur
+groupadd -g 1001 systemoteh
+useradd -u 1001 -g 1001 systemoteh
+passwd systemoteh
 ```
 
 На клиенте:
@@ -100,13 +100,13 @@ git clone https://gitlab.systemoteh.ru/dev/charts/devcontainer.git
 В ручную из локальных исходников:
 
 ```shell
-helm install artur charts/devcontainer
+helm install systemoteh charts/devcontainer
 ```
 
 В ручную, из репозитория:
 
 ```shell
-helm install artur oci://registry.systemoteh.ru/charts/devcontainer --version 0.1.0
+helm install systemoteh oci://registry.systemoteh.ru/charts/devcontainer --version 0.1.0
 ```
 
 Или чарт k3s:
@@ -124,5 +124,5 @@ kubectl apply -f argocd-apps/devcontainer.yaml
 ## Подключение к контейнеру
 
 ```shell
-ssh artur@192.168.1.30 -p 31022
+ssh systemoteh@192.168.1.30 -p 31022
 ```

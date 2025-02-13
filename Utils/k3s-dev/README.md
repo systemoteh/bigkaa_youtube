@@ -108,8 +108,14 @@ curl -sfL https://get.k3s.io | sh -s - server --default-local-storage-path "/var
 
 ```shell
 service k3s status
-/usr/local/bin/kubectl version
-/usr/local/bin/kubectl get pods -A
+kubectl version
+# if kubectl dosn't work
+vi ~/.bashrc
+# add new alias
+alias kubectl='/usr/local/bin/kubectl'
+# save the file and restart current session
+kubectl version
+kubectl get pods -A
 ```
 
 Не забудьте скопировать файл `/etc/rancher/k3s/k3s.yaml` на машины, где вы планируете

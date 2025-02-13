@@ -18,14 +18,14 @@ spec:
   duration: 87600h # 10y
   subject:
     organizations:
-      - "Artur's dev"
+      - "Systemoteh dev"
     organizationalUnits:
-      - "Home lab"
+      - "Systemoteh lab"
     localities:
       - "Moscow"
     countries:
       - "RU"
-  commonName: "Artur home CA"
+  commonName: "Systemoteh Ru CA"
   secretName: dev-ca
   privateKey:
     algorithm: RSA

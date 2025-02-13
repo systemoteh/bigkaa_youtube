@@ -46,7 +46,7 @@ spec:
         host: postgres-np.psql.svc
         port: 5432
         database: gitlab
-        username: artur
+        username: systemoteh
         password:
           useSecret: true
           secret: postgres-secret

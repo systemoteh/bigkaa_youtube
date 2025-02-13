@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: artur-dev
+  name: systemoteh-dev
   namespace: argo-cd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -18,11 +18,11 @@ spec:
           pullPolicy: Always
           tag: "24.04"
         user:
-          name: artur
+          name: systemoteh
           id: "1001"
           baseHomeDirHostPath: /home
           pubKey:
-          - "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOOdZ/awApeoYqqs54lPF1Hxdc9oT0cyjQzM2CxZ2cEQ artur@ART-RYZEN9"
+          - "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOOdZ/awApeoYqqs54lPF1Hxdc9oT0cyjQzM2CxZ2cEQ systemoteh@ART-RYZEN9"
         service:
           nodePort: 31022
         applicationService:

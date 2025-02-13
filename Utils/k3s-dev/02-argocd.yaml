@@ -36,7 +36,7 @@ spec:
 
       
       repositories:
-        artur-repo:
+        systemoteh-repo:
           url: https://github.com/BigKAA/youtube
           name: bigkaa
           type: git

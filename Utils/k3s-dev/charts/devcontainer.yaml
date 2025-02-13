@@ -2,7 +2,7 @@
 apiVersion: helm.cattle.io/v1
 kind: HelmChart
 metadata:
-  name: artur_dev
+  name: systemoteh_dev
   namespace: default
 spec:
   repo: 'oci://registry.systemoteh.ru/charts'
@@ -16,11 +16,11 @@ spec:
       tag: "24.04"
 
     user:
-      name: artur
+      name: systemoteh
       id: "1001"
       baseHomeDirHostPath: /home
       pubKey:
-      - "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICqKwP0oJQXgdrT5FEhR04kokG0RGbdyilTGSd4fLQNk artur@ART-RYZEN9"
+      - "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICqKwP0oJQXgdrT5FEhR04kokG0RGbdyilTGSd4fLQNk systemoteh@ART-RYZEN9"
 
     cacrt: |
       -----BEGIN CERTIFICATE-----
