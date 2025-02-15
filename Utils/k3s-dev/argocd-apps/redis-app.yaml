@@ -14,7 +14,7 @@ spec:
     helm:
       parameters:
         - name: global.redis.password
-          value: 'qUwTt8g9it'
+          value: 'password'
         - name: pdb.create
           value: 'true'
         - name: replica.replicaCount

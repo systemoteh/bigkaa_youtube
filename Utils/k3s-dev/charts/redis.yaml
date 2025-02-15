@@ -12,7 +12,7 @@ spec:
   valuesContent: |-
     global:
       redis:
-        password: 'qUwTt8g9it'
+        password: 'password'
     pdb:
       create: true
     replica:
