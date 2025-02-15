@@ -37,7 +37,7 @@ spec:
       
       repositories:
         systemoteh-repo:
-          url: https://github.com/BigKAA/youtube
+          url: https://github.com/systemoteh/bigkaa_youtube
           name: bigkaa
           type: git
 

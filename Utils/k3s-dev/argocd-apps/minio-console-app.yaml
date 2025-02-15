@@ -8,7 +8,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/BigKAA/youtube'
+    repoURL: 'https://github.com/systemoteh/bigkaa_youtube'
     path: "Utils/k3s-dev/manifests/minio-console/"
     targetRevision: master
   destination:
