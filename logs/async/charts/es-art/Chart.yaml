@@ -6,5 +6,5 @@ version: 0.1.0
 dependencies:
 - name: elasticsearch
   condition: elasticsearch.enabled
-  repository: https://charts.bitnami.com/bitnami
+  repository: https://mirror.yandex.ru/helm/charts.bitnami.com
   version: 18.2.16

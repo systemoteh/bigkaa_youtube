@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://charts.bitnami.com/bitnami
+    repoURL: https://mirror.yandex.ru/helm/charts.bitnami.com
     targetRevision: 20.0.5
     helm:
       values: |-

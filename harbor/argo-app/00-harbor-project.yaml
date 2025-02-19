@@ -8,7 +8,7 @@ metadata:
 spec:
   description: Harbor installation
   sourceRepos:
-  - 'https://charts.bitnami.com/bitnami'
+  - 'https://mirror.yandex.ru/helm/charts.bitnami.com'
   - 'https://helm.goharbor.io'
   - 'https://github.com/BigKAA/youtube'
   destinations:

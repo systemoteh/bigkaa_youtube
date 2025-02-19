@@ -15,7 +15,7 @@ kubectl label nodes worker2.kryukov.local minio=yes
 Добавляем репо helm chart-а:
 
 ```shell
-helm repo add bitnami https://charts.bitnami.com/bitnami
+helm repo add bitnami https://mirror.yandex.ru/helm/charts.bitnami.com
 ```
 
 Учитываем, что для нормальной работы minio должны быть 4 физических хранилища. Т.е. в 

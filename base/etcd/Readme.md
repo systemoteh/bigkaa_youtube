@@ -10,7 +10,7 @@
 Самый простой способ установки - использовать helm chart от [Bitnami](https://bitnami.com/stack/etcd/helm).
 
 ```shell
-helm repo add bitnami https://charts.bitnami.com/bitnami
+helm repo add bitnami https://mirror.yandex.ru/helm/charts.bitnami.com
 helm repo update
 helm search repo etcd
 ```

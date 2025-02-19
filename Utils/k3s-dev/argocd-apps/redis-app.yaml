@@ -8,7 +8,8 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://charts.bitnami.com/bitnami'
+#    repoURL: 'https://charts.bitnami.com/bitnami'
+    repoURL: 'https://mirror.yandex.ru/helm/charts.bitnami.com'
     chart: redis
     targetRevision: 18.12.1
     helm:

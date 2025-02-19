@@ -5,10 +5,10 @@ metadata:
   name: minio
   namespace: kube-system
 spec:
-  chart: "https://charts.bitnami.com/bitnami/minio-11.10.0.tgz"
+  chart: "https://mirror.yandex.ru/helm/charts.bitnami.com/minio-11.10.0.tgz"
   #chart: minio
   #version: "11.10.0"
-  #repo: "https://charts.bitnami.com/bitnami"
+  #repo: "https://mirror.yandex.ru/helm/charts.bitnami.com"
   targetNamespace: default
   valuesContent: |-
     mode: distributed

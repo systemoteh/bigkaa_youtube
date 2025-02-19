@@ -11,10 +11,10 @@ dependencies:
   version: ^7.11.1
 - condition: provisionDataStore.kafka
   name: kafka
-  repository: https://charts.bitnami.com/bitnami
+  repository: https://mirror.yandex.ru/helm/charts.bitnami.com
   version: ^19.1.5
 - name: common
-  repository: https://charts.bitnami.com/bitnami
+  repository: https://mirror.yandex.ru/helm/charts.bitnami.com
   version: 1.16.0
 description: A Jaeger Helm chart for Kubernetes
 home: https://jaegertracing.io

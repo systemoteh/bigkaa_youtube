@@ -6,7 +6,7 @@ version: 0.1.0
 dependencies:
 - name: kafka
   condition: kafka.enabled
-  repository: https://charts.bitnami.com/bitnami
+  repository: https://mirror.yandex.ru/helm/charts.bitnami.com
   version: 26.8.3
 - name: kafdrop
   version: 0.1.0

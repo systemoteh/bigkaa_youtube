@@ -11,9 +11,9 @@ maintainers:
 dependencies:
   - name: redis
     version: 18.5.0
-    repository: https://charts.bitnami.com/bitnami
+    repository: https://mirror.yandex.ru/helm/charts.bitnami.com
     condition: redis.builtin
   - name: postgresql
     version: 13.2.24
-    repository: https://charts.bitnami.com/bitnami
+    repository: https://mirror.yandex.ru/helm/charts.bitnami.com
     condition: postgresql.builtin

@@ -10,7 +10,7 @@ metadata:
   name: minio
   namespace: minio
 spec:
-  repo: 'https://charts.bitnami.com/bitnami'
+  repo: 'https://mirror.yandex.ru/helm/charts.bitnami.com'
   chart: minio
   version: 14.3.0
   targetNamespace: minio

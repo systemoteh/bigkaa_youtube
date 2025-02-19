@@ -5,7 +5,7 @@ metadata:
   name: harbor
   namespace: harbor
 spec:
-  repo: 'https://charts.bitnami.com/bitnami'
+  repo: 'https://mirror.yandex.ru/helm/charts.bitnami.com'
   chart: harbor
   version: 19.6.0
   targetNamespace: harbor
