@@ -150,13 +150,13 @@ kubectl apply -f charts/redis.yaml
 ArgoCD:
 
 ```shell
-kubectl apply -f argocd-apps/minio-app.yaml
+kubectl apply -f argocd-apps/minio-after-delete-console.yaml
 ```
 
 или
 
 ```shell
-kubectl apply -f charts/minio.yaml
+kubectl apply -f charts/minio-after-delete-console.yaml
 ```
 
 ## Minio console
