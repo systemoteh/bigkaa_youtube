@@ -186,7 +186,7 @@ spec:
           host: system-redis-master
           port: 6379
 
-          password: 'qUwTt8g9it'
+          password: 'password'
 
         postgresql:
           enabled: false

@@ -8,7 +8,8 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://charts.bitnami.com/bitnami'
+#    repoURL: 'https://charts.bitnami.com/bitnami'
+    repoURL: 'https://mirror.yandex.ru/helm/charts.bitnami.com'
     chart: redis
     targetRevision: 17.11.3
     helm:
@@ -16,7 +17,7 @@ spec:
         - name: global.storageClass
           value: managed-nfs-storage
         - name: global.redis.password
-          value: 'qUwTt8g9it'
+          value: 'password'
         - name: master.persistence.storageClass
           value: managed-nfs-storage
         - name: pdb.create

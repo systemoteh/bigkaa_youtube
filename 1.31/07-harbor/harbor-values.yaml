@@ -83,7 +83,7 @@ redis:
 externalRedis:
   host: redis-master.redis.svc
   port: 6379
-  password: "qUwTt8g9it"
+  password: "password"
   coreDatabaseIndex: "0"
   jobserviceDatabaseIndex: "1"
   registryDatabaseIndex: "2"

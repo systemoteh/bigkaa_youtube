@@ -14,7 +14,7 @@ spec:
           defaultStorageClass: "managed-nfs-storage"
           storageClass: "managed-nfs-storage"
           redis:
-            password: 'qUwTt8g9it'
+            password: 'password'
         pdb:
           create: true
         replica:

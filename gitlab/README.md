@@ -184,7 +184,7 @@ metadata:
     manual: "yes"
 type: Opaque
 stringData:
-  redis-password: 'qUwTt8g9it'
+  redis-password: 'password'
 EOF
 ```
 

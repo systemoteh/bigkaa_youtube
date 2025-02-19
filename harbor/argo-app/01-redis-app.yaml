@@ -16,7 +16,7 @@ spec:
         - name: global.storageClass
           value: managed-nfs-storage
         - name: global.redis.password
-          value: 'qUwTt8g9it'
+          value: 'password'
         - name: image.registry
           value: quay.io
         - name: image.tag
