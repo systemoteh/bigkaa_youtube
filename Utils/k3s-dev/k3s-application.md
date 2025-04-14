@@ -159,20 +159,6 @@ kubectl apply -f argocd-apps/minio-after-delete-console.yaml
 kubectl apply -f charts/minio-after-delete-console.yaml
 ```
 
-## Minio console
-
-ArgoCD:
-
-```shell
-kubectl apply -f argocd-apps/minio-console-app.yaml
-```
-
-или
-
-```shell
-kubectl -n minio apply -f manifests/minio-console/minio-console.yaml
-```
-
 ## Mail relay
 
 ArgoCD:
@@ -255,7 +241,7 @@ type: Opaque
 stringData:
   runner-registration-token: ""
   # тут подставляем полученный в WEB интерфейсе токен
-  runner-token: "glrt-qZeoBLU_jZ3yDsFtdT7k"
+  runner-token: "glrt-t1_6LuCHnbS-SasZybBEk44"
   
   # S3 cache parameters
   accesskey: "admin"
