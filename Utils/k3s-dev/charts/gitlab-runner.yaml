@@ -12,7 +12,7 @@ spec:
   valuesContent: |-
     imagePullPolicy: IfNotPresent
     revisionHistoryLimit: 3
-    gitlabUrl: https://192.168.1.30/
+    gitlabUrl: http://192.168.1.30/
     terminationGracePeriodSeconds: 3600
     # Количество раннеров
     concurrent: 5
