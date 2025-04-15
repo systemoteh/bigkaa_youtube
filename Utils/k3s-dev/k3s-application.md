@@ -241,7 +241,7 @@ type: Opaque
 stringData:
   runner-registration-token: ""
   # тут подставляем полученный в WEB интерфейсе токен
-  runner-token: "glrt-t1_Yz2jq4o1Ax17mBPzLX98"
+  runner-token: "glrt-t3_s8z-W4gnF2dBbmGgp6Ji"
   
   # S3 cache parameters
   accesskey: "admin"

@@ -1,6 +1,6 @@
 imagePullPolicy: IfNotPresent
 revisionHistoryLimit: 3
-gitlabUrl: http://gitlab.kryukov.local/
+gitlabUrl: http://192.168.1.30/
 terminationGracePeriodSeconds: 3600
 # Количество раннеров
 concurrent: 5
