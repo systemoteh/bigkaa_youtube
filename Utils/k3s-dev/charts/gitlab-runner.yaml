@@ -17,7 +17,7 @@ spec:
     # Количество раннеров
     concurrent: 5
     checkInterval: 30
-    logLevel: info
+    logLevel: debug
     logFormat: json
     sessionServer:
       enabled: false
