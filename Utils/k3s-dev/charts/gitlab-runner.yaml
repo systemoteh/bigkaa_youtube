@@ -12,12 +12,12 @@ spec:
   valuesContent: |-
     imagePullPolicy: IfNotPresent
     revisionHistoryLimit: 3
-    gitlabUrl: http://192.168.1.30/
+    gitlabUrl: http://gitlab-webservice-default:8181/
     terminationGracePeriodSeconds: 3600
     # Количество раннеров
     concurrent: 5
     checkInterval: 30
-    logLevel: debug
+    logLevel: info
     logFormat: json
     sessionServer:
       enabled: false
