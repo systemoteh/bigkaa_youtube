@@ -47,7 +47,7 @@ docker push registry.systemoteh.ru/library/ubuntu_ssh:24.04
 
 ### Сборка контейнера в Gitlab
 
-В gitlab в группе `dev` создаём проект `devcontainer_ubuntu`.
+В gitlab в группе `dev/containers` создаём проект `devcontainer_ubuntu`.
 
 В проекте `devcontainer_ubuntu` добавляем переменную:
 

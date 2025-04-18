@@ -95,6 +95,15 @@ dig mail.ru
 dig dev.systemoteh.ru
 ```
 
+В файл /etc/hosts добавить записи
+```shell
+192.168.1.30 pg.systemoteh.ru
+192.168.1.30 argocd-dev.systemoteh.ru
+192.168.1.30 registry.systemoteh.ru
+192.168.1.30 minio.systemoteh.ru
+192.168.1.30 gitlab.systemoteh.ru
+```
+
 ## k3s
 
 k3s будем ставить в варианте с одной нодой. Мы не предусматриваем дальнейшего расширения
@@ -109,7 +118,7 @@ curl -sfL https://get.k3s.io | sh -s - server --default-local-storage-path "/var
 ```shell
 service k3s status
 kubectl version
-# if kubectl dosn't work
+# if kubectl doesn't work
 vi ~/.bashrc
 # add new alias
 alias kubectl='/usr/local/bin/kubectl'
@@ -122,6 +131,33 @@ kubectl get pods -A
 обращаться к кластеру k3s.
 
 Кластер установлен.
+
+Необходимо добавить forward DNS и ip-записи в ConfigMap coredns -n kube-system
+```yaml
+.:53 {
+  forward . 8.8.8.8 1.1.1.1  # Публичные DNS-серверы
+        # ... остальные настройки
+  hosts /etc/coredns/NodeHosts {
+    ttl 60
+    reload 15s
+    192.168.1.30 gitlab.systemoteh.ru
+    192.168.1.30 argocd-dev.systemoteh.ru
+    192.168.1.30 registry.systemoteh.ru
+    192.168.1.30 minio.systemoteh.ru
+    fallthrough
+  }
+        # ... остальные настройки
+}
+    
+
+```
+
+Перезапуск пода coredns
+```shell
+kubectl -n kube-system get pods | grep coredns
+
+kubectl -n kube-system delete pod coredns-ccb96694c-mshgk
+```
 
 ## Установка приложений
 

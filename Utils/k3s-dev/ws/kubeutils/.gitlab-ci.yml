@@ -3,23 +3,23 @@ stages:
 
 variables:
   KUBE_VERSION:
-    value: "v1.28.6"
+    value: "v1.31.5"
     description: "Версия kubernetes, для которой готовится контейнер"
   HELM_VERSION:
-    value: "v3.14.0"
+    value: "v3.17.1"
     description: "Версия helm"
   REGCLIENT_VERSION:
-    value: "v0.5.7"
+    value: "v0.8.2"
     description: "Версия regclient"
   KUBECONFORM_VERSION:
-    value: "v0.6.4"
+    value: "v0.6.7"
     description: "Версия kubeconform"
 
 container:
   stage: build
   image:
     # https://github.com/GoogleContainerTools/kaniko/releases
-    name: gcr.io/kaniko-project/executor:v1.20.1-debug
+    name: gcr.io/kaniko-project/executor:v1.23.2-debug
     entrypoint: [""]
   tags:
     - global
