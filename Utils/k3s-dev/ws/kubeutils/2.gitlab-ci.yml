@@ -25,7 +25,7 @@ container:
     - global
   before_script:
     - echo "{\"auths\":{\"${DEV_REGISTRY}\":{\"auth\":\"$(printf "%s:%s" "${DEV_REGISTRY_USER}" "${DEV_REGISTRY_PASSWORD}" | base64 | tr -d '\n')\"}}}" > /kaniko/.docker/config.json
-    - cat ${DEV_CA} > ${PROJECT_DIR}/ca.crt
+    - cat ${DEV_CA} > ${CI_PROJECT_DIR}/ca.crt
   script:
     - echo "Build container..."
     - >-
@@ -33,7 +33,7 @@ container:
       -c ${CI_PROJECT_DIR} 
       -d "${DEV_REGISTRY}/library/kubeutils:$(echo ${KUBE_VERSION} | cut -c2-)"
       -f ${CI_PROJECT_DIR}/Dockerfile
-      --registry-certificate ${DEV_REGISTRY}=${PROJECT_DIR}/ca.crt
+      --registry-certificate ${DEV_REGISTRY}=${CI_PROJECT_DIR}/ca.crt
       --build-arg KUBE_VERSION=${KUBE_VERSION}
       --build-arg HELM_VERSION=${HELM_VERSION}
       --build-arg REGCLIENT_VERSION=${REGCLIENT_VERSION}
