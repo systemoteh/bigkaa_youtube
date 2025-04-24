@@ -135,16 +135,16 @@ kubectl get pods -A
 Необходимо добавить forward DNS и ip-записи в ConfigMap coredns -n kube-system
 ```yaml
 .:53 {
-  forward . 8.8.8.8 1.1.1.1  # Публичные DNS-серверы
+    forward . 8.8.8.8 1.1.1.1  # Публичные DNS-серверы
         # ... остальные настройки
-  hosts /etc/coredns/NodeHosts {
-    ttl 60
-    reload 15s
-    192.168.1.30 gitlab.systemoteh.ru
-    192.168.1.30 argocd-dev.systemoteh.ru
-    192.168.1.30 registry.systemoteh.ru
-    192.168.1.30 minio.systemoteh.ru
-    fallthrough
+    hosts /etc/coredns/NodeHosts {
+      ttl 60
+      reload 15s
+      192.168.1.30 gitlab.systemoteh.ru
+      192.168.1.30 argocd-dev.systemoteh.ru
+      192.168.1.30 registry.systemoteh.ru
+      192.168.1.30 minio.systemoteh.ru
+      fallthrough
   }
         # ... остальные настройки
 }

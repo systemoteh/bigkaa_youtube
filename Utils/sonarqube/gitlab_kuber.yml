@@ -1,0 +1,38 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: gitlab-http-api
+  namespace: gitlab
+spec:
+  ingressClassName: system-ingress
+  rules:
+    - host: api.gitlab.systemoteh.ru
+      http:
+        paths:
+          - pathType: Prefix
+            path: /
+            backend:
+              service:
+                name: gitlab-webservice-default
+                port:
+                  number: 8181
+
+
+#cat <<EOF | kubectl apply -f -
+#apiVersion: v1
+#kind: Service
+#metadata:
+#  name: gitlab-np
+#  namespace: gitlab
+#  labels:
+#    app: gitlab
+#spec:
+#  ports:
+#    - port: 8181
+#      name: gitlab-np
+#      targetPort: gitlab-np
+#      nodePort: 32718
+#  type: NodePort
+#  selector:
+#    app: gitlab-webservice-default
+#EOF
